@@ -138,7 +138,22 @@ ksort():- work on Associative array, key sort by ascending order
 krsort():- work on Associative array, value sort by descinding order
 
 -------------------------------------------
-
+array_merge():-
+The array_merge() function merges one or more arrays into one array.
+$a1=array("red","green");
+$a2=array("blue","yellow");
+print_r(array_merge($a1,$a2));
+		
+array_combine():-
+In array_combine, first array as key and second array as a value. But both array must be same length.
+$fname=array("Peter","Ben","Joe");
+$age=array("35","37","43");
+$c=array_combine($fname,$age);
+print_r($c);
+		
+		
+		
+-------------------------------------------
 Get method:-
 GET method is used to send data from form but it is not secure for security perpose becouse all data display in the URL
     and you can send limited data(2000 character) by GET. 
