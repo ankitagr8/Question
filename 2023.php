@@ -221,3 +221,99 @@ require generates a fatal error and stop the execution of the script.
 
 What is OOP?
 OOP stands for Object-Oriented Programming.
+
+What is class
+class is blueprint of object. class is something which define your object.
+class Demo
+{
+   public $name="Ankita";
+   public $email;
+   public $a=8;
+   public $b=7;
+   public function add()
+   {
+   	return 12+2;
+   }
+   
+   public function multi()
+   {
+   	return $this->a * $thi->b;
+   }
+   
+   public function sub($z,$x)
+   {
+   	return $z-$x;
+   }
+}
+
+$obj=new Demo();
+echo $obj->name; //output Ankita
+echo $obj->add();  //14
+echo $obj->multi(); // 56
+echo $obj->sub(7,5);  //2
+
+
+
+----------------------------
+
+What is inheritance 
+The child class will inherit all the public and protected properties and methods from the parent class.
+An inherited class is defined by using the extends keyword.
+
+class Main 
+{
+  public $name="Ankita";
+  public $a=12;
+  public $b=2;
+  public function intro() 
+  {
+    echo "Hello i am ankita kumari";
+  }
+}
+
+
+class Child extends Main
+{
+    public function add()
+    {
+    	return $this->a + $this->b;
+    }
+}
+
+$obj=new Child();
+echo $obj->add(); //14
+echo $obj->name; //Ankita
+
+
+--------------------------------
+
+Trait:-
+Traits are used to declare methods that can be used in multiple classes.
+trait message1 
+{
+   public function msg1() 
+   {
+      echo "OOP is fun! ";
+   }
+}
+
+class Welcome 
+{
+  use message1;
+}
+
+$obj = new Welcome();
+$obj->msg1();
+-------------------------------
+
+construct() :-
+construct is a magic function of PHP, its call automatically when you create a object of class.
+class Main
+{
+  function __construct() 
+  {
+    echo "This is welcome message";
+  }
+}
+
+$obj=new Main();  //This is welcome message
